@@ -1,3 +1,3 @@
 include_recipe "pivotal_workstation::homebrew"
 
-brew_install "imagemagick"
+brew_install "imagemagick --use-rsvg"
