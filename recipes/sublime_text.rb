@@ -11,6 +11,10 @@ link "/usr/local/bin/subl" do
   to "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 end
 
+link "/usr/local/bin/slim" do
+  to "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
+end
+
 sublime_package_path = ["#{WS_HOME}/Library/Application Support/Sublime Text 2", "Packages"]
 sublime_user_path = sublime_package_path.dup << "User"
 
