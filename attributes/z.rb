@@ -1,3 +1,3 @@
 node.default['z'] = {
-  'repository' => 'https://github.com/rupa/z.git'
+  'repository' => 'http://github.com/rupa/z.git'
 }
