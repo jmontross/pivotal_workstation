@@ -54,12 +54,13 @@ ruby_block "Checking that mysql is running" do
   end
 end
 
-execute "set the root password to the default" do
-  command "mysqladmin -uroot password #{PASSWORD}"
-  not_if "mysql -uroot -p#{PASSWORD} -e 'show databases'"
-end
-
-execute "insert time zone info" do
-  command "mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -uroot -p#{PASSWORD} mysql"
-  not_if "mysql -uroot -p#{PASSWORD} mysql -e 'select * from time_zone_name' | grep -q UTC"
-end
+#  mysql --version mysql  Ver 14.14 Distrib 5.6.10, for osx10.8 (x86_64) using  EditLine wrapper
+# execute "set the root password to the default" do
+#   command "mysqladmin -uroot password #{PASSWORD}"
+#   not_if "mysql -uroot -p#{PASSWORD} -e 'show databases'"
+# end
+# 
+# execute "insert time zone info" do
+#   command "mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -uroot -p#{PASSWORD} mysql"
+#   not_if "mysql -uroot -p#{PASSWORD} mysql -e 'select * from time_zone_name' | grep -q UTC"
+# end
